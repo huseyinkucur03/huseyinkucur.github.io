@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Hüseyin Kucur Blog | Anasayfa</title>
+    <link rel="icon" href="/image/HK2.png">
+    <style>
+        /* başlık özellikleri */
+        .ustKisim{
+            background-color: rgb(43, 43, 43);
+            width: 100%;
+            height: 40px;
+        }
+        /* iconların konumları */
+        .ustKisim a{
+            display: block;
+            float: right;
+            padding-top: 10px;
+            padding-right: 50px;
+        }
+        .ustKisim a:nth-child(5){
+            display: block;
+            float: left;
+            padding-left: 50px;
+        }
+        /* iconların rengi */
+        .ustKisim i{
+            color: white;
+            font-size: 20px;
+        }
+        .aramakutusu i:nth-child(1){
+            color: black;
+        }
+        /* üstüne gelince renk değişmesi */
+        .ustKisim a:nth-child(2):hover i{
+            color: #ff0073;
+        }
+        .ustKisim a:nth-child(3):hover i{
+            color: #3a3a3b;
+        }
+        .ustKisim a:nth-child(4):hover i{
+            color: #030ac7;
+        }
+        .ustKisim a:nth-child(5):hover i{
+            color: rgb(189, 255, 127);
+        }
+        .ustKisim a:nth-child(6){
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .ustKisim a:nth-child(6):hover{
+            color: rgb(19, 175, 172);
+        }
+        /* arama kutusu özellikleri */
+        .aramakutusu{
+            position: relative;
+            padding-right: 10px;
+            padding-top: 10px;
+            float: right;
+        }
+        .aramakutusu button:hover{
+            background-color: green;
+            cursor: pointer;       /*üzerine gelince el işareti */
+        }
+        .aramakutusu input[type="text"]{
+            border-radius: 5px;     /* Kenar yuvarlatma */
+            font-size: 16px;
+        }
+        /* hüseyin kucur kısmı*/
+        .adKismi{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;    /*logo yatay hizalama*/
+            align-items: center;        /*logo dikey hizalama*/
+        }
+        .adKismi img{
+            width: 400px;
+            height: 300px;
+        }
+        .adKismi p{
+            font-family:'Times New Roman', Times, serif;
+            color: black;
+            font-size: 30px;
+        }
+        /* .adKismi:hover{
+            opacity: 0.7;
+            transform: scale(1.1);
+        } */
+        /* orta kısım özellikleri*/
+        .hakkimdaKismi{ /* div özellikleri*/
+            width: 100%;
+            height: 500px;
+            text-align: center;
+            display: flex;  /* 3 divi yan yana getirme*/
+            justify-content: space-between;/* boşluğu aralarında bırakmak için*/
+        }
+        .hakkimdaKismi div{ 
+            width: 33%;
+            height: 500px;
+            background-color: antiquewhite;
+            border-radius: 50px;
+        }
+        .hakkimdaKismi div h3{
+            color: rgb(49, 49, 48);
+            cursor: pointer;    /*el işareti*/
+        }
+        /* .hakkimdaKismi h3:hover{
+            color: #ffde59; 
+        } */
+        .hakkimdaKismi div:nth-child(1):hover{
+            background-color: #0a8db5;
+            border-radius: 50px;
+        }
+        .hakkimdaKismi div:nth-child(2):hover{
+            background-color: #5657576a;
+            border-radius: 50px;
+        }.hakkimdaKismi div:nth-child(3):hover{
+            background-color: #a1b000;
+            border-radius: 50px;
+        }
+        /* fotoğraf */
+        .hakkimdaKismi div img{
+            border-radius: 100px;
+            width: 70%;
+            height: 70%;
+            margin-top: 12%;
+            margin-left: 12%;
+            margin-right: 12%;
+        }
+        .hakkimdaTasmaEngelle{
+            overflow: auto;
+            font-size: 15px;
+        }
+        /*iletişim*/
+        .iletisim form{
+            text-align: left;
+            margin-left: 15px;
+        }
+        .iletisim input[type="text"]{
+            border-radius: 10px;
+            width: 80%;
+            height: 20px;
+        }
+        .iletisim input[type="text"]:nth-child(6){
+            border-radius: 10px;
+            width: 80%;
+            height: 50px;
+        }
+        .iletisim input[type="email"]{
+            border-radius: 10px;
+            width: 80%;
+            height: 20px;
+        }
+        .iletisim textarea{
+            border-radius: 10px;
+            width: 80%;
+            height: 50px;
+        }
+        .iletisim button{
+            border-radius: 20px;
+            width: 100px;
+            height: 40px;
+            margin-right: 50%;
+            cursor: pointer;
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+        }
+        /*İstek  ve önerilerin kısmı*/
+        .istekOneri{
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            background-color: antiquewhite;
+            border-radius: 50px;
+        }
+        .istekOneri:hover{
+            background-color: #ffee9a;
+        }
+        .istekDiv{
+            width: 100%;
+            height: 200px;
+            text-align: left;
+            text-align: center;
+        }
+        .istekDiv input{
+            margin-top: 5px;
+            margin-left: 5px;
+            width: 80%;
+            height: 90%;
+            border-radius: 20px;
+        }
+        .istekDiv button{
+            width: 200px;
+            height: 50px;
+            margin-top: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+        }
+        /*en alt kısım*/
+        .telif{
+            width: 100%;
+            height: 60px;
+            background-color: rgb(63, 61, 61);
+            color: white;
+            display: flex; /* yazıyı ortalamak için*/
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="ustKisim">
+        <div class="aramakutusu">
+            <input type="text" placeholder="Arama yapınız.">
+            <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <a href="https://www.instagram.com/huseyinkucur_/?igsh=b2UxOW1rZDNxbGV3" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/huseyinkucur_?t=-lRdICkTX8XfwAsHfcuEUw&s=08" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/h%C3%BCseyin-kucur-24b00425b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="http://127.0.0.1:5500/BlogSitesi/geziler.html" target="_top">Gezilerim</a>
+    </div>
+
+    <div class="adKismi">
+        <center>
+            <p>Hoşgeldiniz</p>
+            <img src="/image/Parag metniniz2.png"
+            alt="Bulunamadı"
+            >
+        </center>
+    </div>
+
+    <hr>
+
+    <div class="hakkimdaKismi">
+            <div class="hakkimdaTasmaEngelle">
+                <h3>Hakkımda</h3>
+                <strong>
+                    <p>Merhaba! Ben Hüseyin, bu blogun yazarıyım. Bilgisayar mühendisliği öğrencisi ve 21 yaşındayım.</p>
+                    <p>Afyonkarahisar'ın Bolvadin ilçesinde 16 Ocak 2003'te doğdum. Bolvadin Kemalettin Sami Paşa İlkokulunda ilkokul eğitimimi, 
+                    Bolvadin Anadolu Lisesinde ise lise eğitimimi tamamladım.
+                    2022 yılında Afyon Kocatepe Üniversitesi Bilgisayar Mühendisliğini kazanarak üniversite macerasına başladım.
+                    </p>
+                    <p>Bilgisayar teknolojilerine ve yazılıma olan ilgim, çocukluğumdan beri benimle birlikte oldu.
+                        Kod yazmak, yeni teknolojiler keşfetmek ve bilgisayar sistemlerinin nasıl çalıştığını anlamak beni her zaman heyecanlandırdı. 
+                        Şu anda Afyon Kocatepe Üniversitesi'nde bilgisayar mühendisliği alanında eğitim görüyorum ve bu alanda kendimi sürekli olarak geliştirmek için çaba sarf ediyorum.
+                    </p>
+                    <p>Bununla birlikte, bilgisayar mühendisliği dışında da ilgi alanlarım var. 
+                    Futbol, kitap okumak, tarihle ilgilenmek ve bilgisayar oyunu oynamak gibi hobilerimle ilgileniyorum ve zamanımın bir kısmını bu aktivitelere ayırıyorum. 
+                    Ayrıca, teknolojinin insan yaşamını nasıl etkileyebileceği ve topluma nasıls katkı sağlayabileceği konularına da ilgi duyuyorum.
+                    </p>
+                    <p>Teşekkürler ve blogumu ziyaret ettiğiniz için çok memnun oldum!
+
+                        Saygılarımla,
+                        Hüseyin Kucur</p>
+
+                </strong>
+            </div>
+
+            <div>
+                <img src="/image/WhatsApp Görsel 2024-04-14 saat 13.50.58_6893e005.jpg" alt="">
+                <br>
+                <br>
+                <b><i>huseyinkucur753@hotmail.com</i></b>
+            </div>
+
+            <div class="iletisim">
+                <h3>İletişim</h3>
+                <form>
+                    <h3>Adınız:</h3>
+                    <input type="text" placeholder="Adınız">
+                    <h3>Eposta adresi:</h3>
+                    <input type="email" placeholder="Eposta adresiniz">
+                    <!-- <h3>Konu:</h3>
+                    <textarea name="konu" id="" cols="20" rows="5"></textarea> -->
+                    <h3>İletiniz:</h3>
+                    <!-- <textarea name="ileti" id="" cols="30" rows="10"></textarea> -->
+                    <input type="text" placeholder="İletiniz">
+                    <button>Gönder</button>
+                </form>
+            </div>
+    </div>
+
+    <hr> 
+
+    <!-- <div class="istekOneri">
+        <h3>İstek ve Öneriler</h3>
+        <div class="istekDiv">
+            <input type="text">
+            <br>
+            <button>İlet</button>
+        </div>
+    </div> -->
+
+    <div class="telif">
+        <p>© 2024 Telif hakkı saklıdır. Hüseyin Kucur</p>
+    </div>
+</body>
+</html>

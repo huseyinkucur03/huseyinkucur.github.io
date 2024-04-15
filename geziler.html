@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="/image/HK2.png">
+    <title>Hüseyin Kucur | Gezilerim</title>
+    <style>
+       /* başlık özellikleri */
+       .ustKisim{
+            background-color: rgb(43, 43, 43);
+            width: 100%;
+            height: 40px;
+        }
+        /* iconların konumları */
+        .ustKisim a{
+            display: block;
+            float: right;
+            padding-top: 10px;
+            padding-right: 50px;
+        }
+        .ustKisim a:nth-child(5){
+            display: block;
+            float: left;
+            padding-left: 50px;
+        }
+        /* iconların rengi */
+        .ustKisim i{
+            color: white;
+            font-size: 20px;
+        }
+        .aramakutusu i:nth-child(1){
+            color: black;
+        }
+        /* üstüne gelince renk değişmesi */
+        .ustKisim a:nth-child(2):hover i{
+            color: #ff0073;
+        }
+        .ustKisim a:nth-child(3):hover i{
+            color: #3a3a3b;
+        }
+        .ustKisim a:nth-child(4):hover i{
+            color: #030ac7;
+        }
+        .ustKisim a:nth-child(5):hover i{
+            color: rgb(189, 255, 127);
+        }
+        .ustKisim a:nth-child(6){
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .ustKisim a:nth-child(6):hover{
+            color: rgb(19, 175, 172);
+        }
+        /* arama kutusu özellikleri */
+        .aramakutusu{
+            position: relative;
+            padding-right: 10px;
+            padding-top: 10px;
+            float: right;
+        }
+        .aramakutusu button:hover{
+            background-color: green;
+            cursor: pointer;       /*üzerine gelince el işareti */
+        }
+        .aramakutusu input[type="text"]{
+            border-radius: 5px;     /* Kenar yuvarlatma */
+            font-size: 16px;
+        }
+        .gezi{
+            background-color: rgb(170, 169, 169);
+            display: flex;
+            text-align: center;
+        }
+        .gezi div{
+            width: 33%;
+            border-radius: 20px;
+        }
+        .gezi img{
+            width: 230px;
+            height: 230px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        .geziBilgileri{     /*ANITKABİR*/
+            background-color: #c1ab80;
+;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            overflow: auto;
+        }
+        .geziBilgileri2{    /*ABİDE*/
+            background-color: #7aa9e1;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            overflow: auto;
+        }
+        .geziBilgileri3{    /*MARDİN*/
+            background-color: #c9975d;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            overflow: auto;
+        }
+
+
+        .gezi2{
+            background-color: rgb(170, 169, 169);
+            display: flex;
+            text-align: center;
+        }
+        .gezi2 div{
+            width: 33%;
+            border-radius: 20px;
+        }
+        .gezi2 img{
+            width: 230px;
+            height: 230px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        .geziBilgileri4{     /*RAMS PARK*/
+            background-color: #6eb83e;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            overflow: auto;
+        }
+        .geziBilgileri5{    /*FRİGYA*/
+            background-color: #d6a98a;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            overflow: auto;
+        }
+        .geziBilgileri6{    /*ILGAZ*/
+            background-color: #92a043;
+            height: 400px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            overflow: auto;
+        }
+                /*en alt kısım*/
+                .telif{
+            width: 100%;
+            height: 60px;
+            background-color: rgb(63, 61, 61);
+            color: white;
+            display: flex; /* yazıyı ortalamak için*/
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="ustKisim">
+        <div class="aramakutusu">
+            <input type="text" placeholder="Arama yapınız.">
+            <button type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <a href="https://www.instagram.com/huseyinkucur_/?igsh=b2UxOW1rZDNxbGV3" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/huseyinkucur_?t=-lRdICkTX8XfwAsHfcuEUw&s=08" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/h%C3%BCseyin-kucur-24b00425b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="http://127.0.0.1:5500/BlogSitesi/blog.html" target="_parent">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="http://127.0.0.1:5500/BlogSitesi/geziler.html" target="_parent">Gezilerim</a>
+    </div>
+
+    <div class="gezi">
+        <div class="geziBilgileri">
+            <img src="/image/anitkabir.jpeg" 
+            alt="Bulunamadı">
+            <br>
+            <strong>Anıtkabir</strong>
+            <br>
+            Ankara'da bulunan Anıtkabir'i ziyaret etmek, Türkiye'nin modern tarihine dokunmak adına çok etkileyici bir deneyimdi.
+            Sergi Salonu'nda ise Atatürk'ün kişisel eşyalarını ve fotoğraflarını görmek, onun vizyonunu ve liderliğini daha yakından anlamama yardımcı oldu. 
+            Anıtkabir, Türk milletinin bağımsızlık ve modernleşme mücadelesinin sembolü olarak, ziyaretçilerine derin bir tarihî ve kültürel yolculuk sunuyor.
+            Kesinlikle herkesin görmesi gereken bir yer olduğunu düşünüyorum.
+        </div>
+    
+        <div class="geziBilgileri2">
+            <img src="/image/abide.jpg" 
+            alt="Bulunamadı">
+            <br>
+            <strong>Çanakkale Şehitler Abidesi</strong>
+            <br>
+            Ziyaretçiler, anıtın etrafındaki alanda dolaşarak savaşın izlerini hissedebilir ve şehitlerin manevi mirasına saygı gösterebilirler. 
+            Anıtın etrafındaki açık hava müzesi, savaş dönemine ait eşyaları ve bilgilendirici panolarıyla ziyaretçilere tarihî bir yolculuk sunar.
+            Çanakkale Şehitleri Anıtı'nı ziyaret etmek, Türk milletinin bağımsızlık ve vatanseverlik ruhunu derinden hissetmek için önemli bir fırsattır. 
+            Anıt, savaşın acı gerçeklerini hatırlatarak barış ve uzlaşma mesajı verir. Çanakkale'de hayatını kaybedenlerin anısını yaşatmak ve onların fedakarlıklarını unutmamak, Türk milletinin ortak değerlerinden biridir.
+        </div>
+
+        <div class="geziBilgileri3"> 
+            <img src="/image/mardin.webp" 
+            alt="Bulunamadı">
+            <br>
+            <strong>Mardin Midyat</strong>
+            <br>
+            Eski Mardin'i ziyaret etmek, adeta zaman yolculuğuna çıkmak gibiydi. 
+            Taş sokaklarında dolaşırken, binlerce yıllık tarih ve kültürle iç içe olma hissiyatı beni derinden etkiledi. 
+            Şehrin tarihî dokusunu yansıtan taş evler, dar sokaklar ve geleneksel mimari, adeta bir açık hava müzesi gibiydi.
+            Farklı inançlara ait ibadet yerlerinin bir arada bulunması ve insanların barış ve hoşgörü içinde bir arada yaşaması, gerçekten takdire şayandı.
+            Bu benzersiz şehirde geçirdiğim zaman, yaşadığım duygusal ve düşünsel etkiyi uzun süre unutmayacağım.
+        </div>
+    </div>
+    
+    <div class="gezi2">
+        <div class="geziBilgileri4">
+            <img src="/image/ramspark.jpg" 
+            alt="Bulunamadı">
+            <br>
+            <strong>Rams Park Stadyumu</strong>
+            <br>
+            Bir futbol sever olarak Rams Park Stadyumu'nda maç izlemek, sadece futbolun heyecanını değil, aynı zamanda Galatasaray'ın efsanevi atmosferini de yaşamak demektir. 
+            Taraftarların tezahüratları, marşları ve coşkusu, stadyumu adeta bir kalesine dönüştürür.
+            Türk Telekom Stadyumu, Galatasaray taraftarları için sadece bir spor mekanı değil, aynı zamanda duygusal bağların güçlendiği bir topluluk merkezidir. 
+        </div>
+
+        <div class="geziBilgileri5">
+            <img src="/image/frigya.jpg" 
+            alt="Bulunamadı">
+            <br>
+            <strong>Frigya</strong>
+            <br>
+            Frigya, benim için tarihle doğanın muhteşem bir buluşmasıdır. 
+            Bu antik bölgeyi ziyaret ettiğimde, kendimi geçmişin derinliklerine bir yolculuk yapıyormuş gibi hissediyorum. 
+            Antik kentlerin taşları arasında dolaşırken, Friglerin yaşamını, inançlarını ve kültürünü hayal etmek beni büyülüyor.
+            Frigya'nın her ziyaretimde, tarihî ve doğal mirasının büyüsüne kapılıyorum.  
+            Frigya'yı ziyaret etmek, geçmişle doğanın kucaklaşmasıdır ve bu deneyim benim için daima unutulmaz bir anı olarak kalacak.
+        </div>
+
+        <div class="geziBilgileri6">
+            <img src="/image/ılgaz.jpg" 
+            alt="Bulunamadı">
+            <br>
+            <strong>Ilgaz Dağı</strong>
+            <br>
+            İlgaz Dağı, benim için doğanın ve maceranın bir araya geldiği eşsiz bir nokta. 
+            Kışın karla kaplı zirveleri, yazın ise yeşillikler içindeki vadileriyle İlgaz, her mevsimde farklı bir güzellik sunuyor.
+            Doğa yürüyüşleri yapmak, göletlerde piknik yapmak ve çadır kurarak geceyi dağın sessizliğinde geçirmek, benim için doğayla iç içe olmanın en güzel yollarından biri. 
+            Bu dağ, benim için sadece bir doğa harikası değil, aynı zamanda ruhumu ve zihnimin dinlendiği bir sığınak haline gelmiştir.
+        </div>
+    </div>
+    <div class="telif">
+        <p>© 2024 Telif hakkı saklıdır. Hüseyin Kucur</p>
+    </div>
+</body>
+</html>
